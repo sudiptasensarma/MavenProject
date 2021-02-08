@@ -6,13 +6,13 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features="Login\\Login.feature",
+@CucumberOptions(features="eLearning\\Login.feature",
 glue="StepDefinition",
-tags = "@Positivetesting",
+//tags = "@Email",
 monochrome=true,//this is to make the console output in a better format
-dryRun=false,//tocheck all methods are implemented
-strict=true// to check did I miss anything
-//tags = "Positivetesting"
+dryRun=false,//to check all methods are implemented
+strict=true,// to check did I miss anything
+plugin = {"html:testoutput/testoutput.html","junit:testoutput/cucumber.xml","json:testoutput/cucumber.json"}
 		)
 public class Testrunner {
 
